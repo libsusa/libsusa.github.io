@@ -1,0 +1,243 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background: #34535e;
+  /*background: #02303A;*/
+  height: 100%;
+  font-family: 'Droid Sans', serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+nav
+{
+  background:#222;
+  overflow: hidden;
+  float: left;
+  width: auto;
+}
+
+nav ul
+{
+  margin-top:    30px;
+  padding-left:  0;
+  padding-right: 10px;
+  float: left;
+}
+
+nav ul li
+{
+  list-style-type: none;
+  display:inline-block;
+}
+
+a#current
+{
+  /*color: #1ABC9C;*/
+  color: #00c489;
+}
+
+nav  ul  li  a
+{
+  color: #aaa;
+  background-color:#222;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header img
+{
+  background:#222;
+  float: left;
+  clear: left;
+  padding-right: 30px;
+}
+
+header
+{
+  width: 100%;
+  position: absolute;
+  background:#222;
+  font-family: 'Droid Sans', serif;
+  font-size: 14px;
+}
+
+header button
+{
+  color: #aaa;
+  margin-top: 35px;
+  margin-right: 20px;
+  background: black;
+  border : 0;
+  float: right;
+}
+
+
+.icon-bar
+{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 3px;
+  background-color: #aaa;
+  border-radius: 1px;
+}
+
+footer
+{
+  position: fixed;
+  color: black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #aaa;
+  margin: auto;
+}
+
+footer span
+{
+  display:block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+}
+
+article
+{
+  position: absolute;
+  color: white;
+  margin-top: 100px;
+  text-align: justify;
+  width: 80%;
+}
+
+article div
+{
+  font-family: 'Droid Sans', serif;
+  font-size: 16px;
+  text-align: justify;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 720px)
+{
+  nav
+  {
+    border-top: none;
+  }
+  nav ul li
+  {
+    display: inline;
+  }
+  header button
+  {
+    display: none;
+  }
+  /*article {color: red;}*/
+}
+
+@media (max-width: 720px)
+{
+  nav ul li
+  {
+    display: none;
+  }
+  header button
+  {
+    display: inline;
+  }
+
+  #github
+  {
+    display: none;
+  }
+  /*article {color: blue;}*/
+}
+
+@media (max-width: 720px) and (orientation:portrait)
+{
+  table
+  {
+    transform:rotate(270deg);
+    margin-top: 180px;
+    margin-bottom: 35px;
+  }
+}
+
+legend
+{
+  color: #aaa;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+fieldset
+{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+a:visited
+{
+  color:#aaa;
+}
+
+a:hover
+{
+  color:white;
+}
+
+a:focus
+{
+}
+
+a:active
+{
+  outline: none;
+}
+
+a
+{
+  color: #71BBFB;
+  text-decoration: none;
+  outline: none;
+}
+
+#github
+{
+  padding: 0px;
+  padding-right: 5px;
+  width: 20px;
+}
+
+
+table
+{
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: collapse;
+}
+
+th, td
+{
+  padding-left  : 10px;
+  padding-right : 10px;
+  border-bottom : 2px solid white;
+}
