@@ -103,7 +103,8 @@ $(document).ready(function() {
   if(window.location.hash) {
       // hash found
       var page = window.location.hash.substring(1);
-      load (page);
+      console.log('hash : ' + page);
+      load(page);
   } else {
       // No hash found
       load('main');

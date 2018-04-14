@@ -1,19 +1,25 @@
 <div>
-  Susa is a mathematics and signal processing C++ framework based on <a href="http://en.wikipedia.org/wiki/KISS_principle">KISS</a> principle.
-  The mobility is the key feature of Susa. It is a stand-alone and modern signal processing framework that can easily be ported
-  to mobile platforms. It is designed not to have any dependencies to any none standard third party library. A C++11
-  compiler is neccessary and sufficient in order to compile it. Therefore, Susa can be exploited in mobile platforms such as
-  Android <a href="https://developer.android.com/tools/sdk/ndk/">NDK</a> (Native Development Toolkit) without restriction.
+  Susa is a mathematics and signal processing C++ framework based on <a href="http://en.wikipedia.org/wiki/KISS_principle">KISS</a>
+  principle. It is stand-alone with a modern architecture. It is designed not to have any dependencies to none standard third
+  party libraries. Indeed, a C++11 compiler along with STL is necessary and sufficient in order to compile it. Therefore,
+  portability is the key feature of Susa. For example it can be used in mobile platforms such as Android 
+  <a href="https://developer.android.com/tools/sdk/ndk/">NDK</a> (Native Development Toolkit) without any restriction.
   This brings the power and speed of the C++ native code to the user friendly Java based mobile applications.
+  
+  Susa is also a simulation framework for the researchers and engineers who design
+  computational systems. It has linear algebra, signal processing and common communications blocks.
+  A matrix and array template class are at the heart of Susa with a constellation of classes and functions.
 
-  Susa is also a simulation framework for the researchers and engineers who design computational systems. It has linear algebra,
-  signal processing and communications common methods.
-
-  <p>Highlights of this framework other than providing basic mathematical tools are:</p>
+  <p> The highlights of this framework other than providing basic mathematical tools are:</p>
   <ul>
-    <li>Convolutional Forward Error Correction (FEC) computational blocks (Encoder, Viterbi and BCJR decoders),</li>
-    <li>Channel equalizer (Viterbi and BCJR decoders),</li>
+    <li>Matrix and multi-dimensional array types (template classes),</li>
     <li>Linear algebraic operations and analysis (e.g. Determinant and SVD),</li>
-    <li>Signal processing operations (e.g. FFT, Filter, Convolution and Random Number Generators).</li>
+    <li>Signal processing operations (e.g. FFT, Filter (FIR/IIR), Convolution and Random Number Generators),</li>
+    <li>Convolutional Forward Error Correction (FEC) blocks: encoder, MLSE (Viterbi) and MAP (BCJR) decoders,</li>
+    <li>Channel equalizers: MLSE (Viterbi) and MAP (BCJR).</li>
   </ul>
+
+  Unearthed tablets from Susa (2000 BC) revealed a rather precise calculation of Pi = 3.125 with the fractional part whereas
+  the other earlier efforts calculated the integer part. Since the very first line of code was simply the definition of constant Pi,
+  it has been named Susa.
 </div>
