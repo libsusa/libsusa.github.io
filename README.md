@@ -1,2 +1,2 @@
-# susalib.github.io
-The Website
+# libsusa.github.io
+Susa Open Source Project
