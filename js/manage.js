@@ -1,4 +1,4 @@
-// Behrooz Kamary Aliabadi
+// Behrooz Kamary
 // Version 0.5.0
 
 var ongoing = 0;
