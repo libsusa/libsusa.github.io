@@ -92,6 +92,7 @@ $(window).resize(function()
 
 function load(page)
 {
+    window.location.hash = page;
     $('#article').load('content/' + page + '.html');
     $('nav ul li a').css('color','#aaa');
     $('nav ul li a#' + page).css('color','#00c489');
@@ -102,8 +103,8 @@ function load(page)
 $(document).ready(function() {
   if(window.location.hash) {
       // hash found
-      var page = window.location.hash.substring(1);
       console.log('hash : ' + page);
+      var page = window.location.hash.substring(1);
       load(page);
   } else {
       // No hash found
