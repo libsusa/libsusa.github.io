@@ -1,11 +1,16 @@
+:root {
+  --golden:#d6b600;
+  --golden-bg:#292719;
+  --navbar: #222;
+}
+
 body
 {
   margin: 0;
   padding: 0;
-  background: #34535e;
-  /*background: #02303A;*/
+  background: var(--golden-bg);
   height: 100%;
-  font-family: 'Droid Sans', serif;
+  font-family: 'PT Serif', 'Droid Sans', 'Arial', serif;
   font-size: 14px;
   line-height: 1.42857143;
 }
@@ -74,7 +79,7 @@ header button
   color: #aaa;
   margin-top: 35px;
   margin-right: 20px;
-  background: black;
+  background: var(--navbar);
   border : 0;
   float: right;
 }
@@ -93,13 +98,13 @@ header button
 footer
 {
   position: fixed;
-  color: black;
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: #aaa;
+  background-color: var(--navbar);
   margin: auto;
 }
 
@@ -146,7 +151,6 @@ article div
   {
     display: none;
   }
-  /*article {color: red;}*/
 }
 
 @media (max-width: 720px)
@@ -164,7 +168,6 @@ article div
   {
     display: none;
   }
-  /*article {color: blue;}*/
 }
 
 @media (max-width: 720px) and (orientation:portrait)
@@ -203,9 +206,7 @@ a:hover
   color:white;
 }
 
-a:focus
-{
-}
+
 
 a:active
 {
@@ -217,6 +218,10 @@ a
   color: #71BBFB;
   text-decoration: none;
   outline: none;
+}
+
+#logo {
+  width: 200px;
 }
 
 #github
