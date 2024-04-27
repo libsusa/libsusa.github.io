@@ -95,7 +95,7 @@ function load(page)
     window.location.hash = page;
     $('#article').load('content/' + page + '.html');
     $('nav ul li a').css('color','#aaa');
-    $('nav ul li a#' + page).css('color','#00c489');
+    $('nav ul li a#' + page).css('color','#d6b600');
     menu_display();
     article_adapter();
 }
