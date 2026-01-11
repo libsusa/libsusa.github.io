@@ -1,6 +1,3 @@
-// Behrooz Kamary
-// Version 0.5.0
-
 var ongoing = 0;
 
 function menu_display()
@@ -16,7 +13,6 @@ function menu_display()
     console.log('close the open menu.');
   }
 
-  //if ($(window).width() > 720)
   if (window.matchMedia('(min-width: 720px)').matches)
   {
     $('nav ul li').css('display','inline');
@@ -57,13 +53,13 @@ function menu_button_click()
   { // open
     $('nav').css('border-top','1px solid #404040');
     $('nav').css('width','100%');
-    $('article').animate({ 'margin-top' : '360px' }, 'fast', slide_callback);
+    $('article').animate({ 'margin-top' : '380px' }, 'fast', slide_callback);
     ongoing++;
   }
   else
   { // close
     $('nav').css('border-top','none');
-    $('article').animate({ 'margin-top' : '100px' }, 'fast', slide_callback);
+    $('article').animate({ 'margin-top' : '200px' }, 'fast', slide_callback);
     ongoing++;
   }
 
@@ -72,9 +68,7 @@ function menu_button_click()
 
 function article_adapter()
 {
-  $('article').css('margin-left', $(window).width() * 0.1 + 'px');
-  $('article').css('margin-right', $(window).width() * 0.1 + 'px');
-  $('article').css('margin-top', '100px');
+  $('article').css('margin-top', '200px');
 }
 
 $(function()
@@ -93,22 +87,31 @@ $(window).resize(function()
 function load(page)
 {
     window.location.hash = page;
-    $('#article').load('content/' + page + '.html');
-    $('nav ul li a').css('color','#aaa');
+    
+    $('#article').fadeOut('fast', function () {
+      $(this).load(`content/${page}.html`, function (response, status, xhr) {
+        if (status === "success") {
+          $(this).fadeIn('slow');
+        } else {
+          $(this).html(`<p>Error loading content.</p>`).fadeIn();
+        }
+      });
+    });
+
+    $('nav ul li a').css('color','var(--text-primary)');
     $('nav ul li a#' + page).css('color','var(--golden)');
     menu_display();
     article_adapter();
+    window.scrollTo(0, 0)
 }
 
-$(document).ready(function() {
-  if(window.location.hash) {
-      // hash found
-      console.log('hash : ' + page);
-      var page = window.location.hash.substring(1);
-      load(page);
-  } else {
-      // No hash found
-      load('main');
-  }
+$(function() {
+  $('nav').on('click', 'a[href^="#"]', function(e) {
+    e.preventDefault();
+    const pageId = $(this).attr('id');
+    load(pageId);
+  });
 
+  const initialPage = window.location.hash ? window.location.hash.substring(1) : 'main';
+  load(initialPage);
 });
